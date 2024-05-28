@@ -1,0 +1,87 @@
+.login-container {
+    background-color: #000; /* Adjust to match the exact color */
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-logo {
+    /* Placeholder for the logo */
+    width: 100%;
+    background-image: url('./LOGO.png'); /* Add your logo image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px; /* Adjust based on your logo */
+    width: 100px; /* Adjust based on your logo */
+  }
+  
+  h1 {
+    margin: 10px 0;
+    /* Add font styling that matches the image */
+  }
+  
+  p {
+    margin-bottom: 20px;
+    /* Add font styling that matches the image */
+  }
+  
+  .login-form {
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px; /* Adjust to match the curvature in the image */
+    /* Add more styling to match the placeholder and input styles from the image */
+  }
+  
+  button {
+    width: 105%; /* Adjusted to not span the full container width for better aesthetics */
+    padding: 15px;
+    border: none;
+    border-radius: 30px; /* More rounded corners for a modern look */
+    background-color: #1a1a1a; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align-last: center;
+    letter-spacing: 1px; /* Increase letter-spacing for better readability */
+    transition: background-color 0.2s, transform 0.1s; /* Smooth background color transition and slight transform on click */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16); /* Subtle shadow for depth */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+  
+  button:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+  }
+  
+  button:active {
+    transform: translateY(2px); /* Small shift to mimic button press */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12); /* Reduced shadow to mimic button press */
+  }
+  
+  .login-footer {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #fff; /* Adjust if needed */
+    text-decoration: none;
+  }
+  
+  /* Add responsive and other specific styling as needed */
+  

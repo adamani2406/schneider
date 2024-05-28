@@ -1,0 +1,62 @@
+.maintenance-page-container {
+    padding: 20px;
+}
+
+.maintenance-videos-container {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border: 4px solid #f3601c;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.videos-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, auto); /* Three rows */
+    grid-gap: 20px; /* Gap between grid items */
+}
+
+.video-description-container {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background-color: grey;
+    border: 4px solid #f3601c;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.player-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the player horizontally */
+}
+
+.description-box {
+    border: 4px solid #f3601c; /* Border style */
+    background-color: white; /* White background */
+    padding: 10px; /* Padding around the text */
+    display: inline-block; /* Ensure the box size matches the text content */
+    color: black; /* Text color */ /* Customize the border color and style */
+}
+.total-distance {
+    position: fixed;      /* Fixed positioning relative to the viewport */
+    bottom: 10px;         /* 10 pixels from the bottom */
+    left: 10px;           /* 10 pixels from the left */
+    z-index: 1000;        /* Ensure it stays on top of other content */
+    padding: 10px 20px;   /* Padding for better appearance */
+    background-color: #007bff; /* Background color */
+    color: white;         /* Text color */
+    border: none;         /* No border */
+    border-radius: 5px;   /* Rounded corners */
+    cursor: pointer;      /* Pointer cursor on hover */
+  }
+  
+  .total-distance:hover {
+    background-color: #0056b3; /* Darker shade on hover for better UI feedback */
+  }

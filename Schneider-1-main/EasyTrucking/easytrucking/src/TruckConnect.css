@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.dashboard-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #313131;
+  color: white;
+  padding: 12px;
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; 
+  border-radius: 40px; 
+  box-sizing: border-box; 
+}
+
+.map-container {
+  height: 100vh; /* or 100vh for full height */
+  width: 100%; /* or a specific width if required */
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px; /* Add space between buttons */
+  margin-bottom: 20px; /* Space below the button container */
+}
+
+.circle-button {
+  background-color: #686c69; /* Example color, adjust as needed */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  padding: 10px 20px; /* Added padding for text */
+  min-width: 140px; /* Minimum width to accommodate longer text */
+  height: 150px; /* Adjust height automatically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em; /* Adjust font size as needed */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow for depth */
+}
+
+.circle-button:focus,
+.circle-button:hover {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.carplay-btn, .stat, .speed-bar, .timeline-container {
+  background: linear-gradient(145deg, #232528, #1b1d21); /* A subtle gradient for depth */
+  color: #CDD1D4; /* Light grey for text that's easy on the eyes */
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for elevation */
+}
+
+.carplay-btn {
+  font-weight: 700; /* Bolder text for better readability */
+  transition: background 0.3s, transform 0.1s; /* Smooth background fade and press animation */
+}
+
+.carplay-btn:hover {
+  background: linear-gradient(145deg, #2e3136, #252729); /* Lighter gradient for hover state */
+}
+
+.carplay-btn:active {
+  transform: scale(0.98); /* Slight scale down to mimic button press */
+}
+
+.speed-bar {
+  background-color: #333; /* Dark background for the unfilled part of the speed bar */
+  border-radius: 15px; /* Uniform rounded corners for the bar */
+  overflow: hidden;
+  height: 30px;
+  width: 90%;
+  /* Add additional styling as needed */
+}
+
+.timeline-container {
+  position: relative;
+  width: 90%;
+  margin: 20px auto 40px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.timeline-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black; /* Ensure the text color contrasts well with the segment background */
+  font-family: 'Roboto', sans-serif; /* Apply Roboto for consistency */
+  font-size: 16px; /* Adjust the font size according to your design needs */
+  font-weight: 500; /* Medium weight for better readability */
+  text-transform: uppercase; /* Optional: Makes the text uppercase for emphasis */
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(40, minmax(100px, 1fr));
+  background-color: #333;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  grid-gap: 2px;
+}
+
+.timeline-segment.driving {
+  background-color: #4CAF50; /* Color for driving segments */
+  /* this should be thicker than the break segment */
+  grid-column: span 5;
+  /* No need to set grid-column here, will auto-adjust based on content */
+}
+
+.timeline-segment.break {
+  background-color: #F44336; /* Color for break segments */
+  /* No need to set grid-column here, will auto-adjust based on content */
+}
+
+.timeline-segment.NA {
+  background-color: white;
+  grid-column: span 6;
+}
+
+.timeline-labels {
+  display: grid;
+  /* add labels to the start middle and end*/
+  grid-template-columns: 1fr 1fr 1fr;
+  position: absolute;
+  bottom: -40px; /* Adjust as necessary to fit */
+  left: 0;
+  width: 100%;
+}
+
+.timeline-label {
+  color: white;
+  background-color: #222; /* Background for better visibility */
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  /* Remove position absolute to allow grid to manage placement */
+}
+
+@media (max-width: 500px) {
+  .dashboard-container {
+    padding: 15px;
+    margin: 15px;
+    height: calc(100vh - 30px); /* Adjust height considering the smaller margin */
+    border-radius: 20px; /* Adjust for smaller screens */
+  }
+
+  .carplay-btn, .stat, .speed-bar, .timeline-container {
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .carplay-btn {
+    font-size: 0.9em; /* Slightly smaller font size for smaller devices */
+  }
+
+  .timeline-labels {
+    padding-top: 3px; /* Less space on smaller screens */
+  }
+}
+
+.stat-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-gap: 20px; /* Gap between grid items */
+}
+
+.indiv-stat-container {
+  font-size: 36px; /* Larger font size */
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  border: 4px solid #1b1d21;
+  border-radius: 8px;
+  color: white;
+}
+
+.stat-container {
+  font-size: 36px; /* Larger font size */
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  border: 4px solid black;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.speed-indicator {
+  height: 60px; /* Set a specific height */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s ease, background-color 0.5s ease; /* Smooth transition for changes */
+  border-radius: 8px; /* Rounded corners for the indicator */
+}
+
+.stat-label {
+  font-size: 24px; /* Font size for the labels */
+  margin-bottom: 10px;
+}
+
+
+/* Custom scrollbar for a more refined look */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #202225;
+}
